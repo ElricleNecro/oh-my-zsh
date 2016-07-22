@@ -86,7 +86,7 @@ unset_ensta() {
 	unset http_proxy https_proxy ftp_proxy
 }
 
-function createClassPath() {
+function createClassPath() {                                                                                                                                                                    gplum@pc-plum
         for f in $*
         do
                 CL="$CL:$f"
