@@ -44,7 +44,7 @@ alias yu='yaourt -Syua'
 ## global aliases (for those who like them) ##
 alias -g '...'='../..'
 alias -g '....'='../../..'
-# alias -g BG='& exit'
+alias -g BG='& exit'
 alias -g WC='|wc -l'
 alias -g G='|grep'
 alias -g H='|head'
