@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 PERL5LIB=$PERL5LIB:$HOME/.local/lib/
+=======
+PERL5LIB=$PERL5LIB:/home/plum/.local/lib/
+>>>>>>> Added some of my configuration file.
 export PERL5LIB
 
 # PAGER=`which most`
@@ -74,7 +78,6 @@ export MANPATH
 
 PATH="/usr/local/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
-PATH="/usr/local/bin:$PATH"
 PATH="$HOME/.local/lib/go/bin/:$PATH"
 PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.gem/ruby/2.3.0/bin:$PATH"
@@ -115,9 +118,3 @@ export RUST_SRC_PATH
 
 R_LIBS_USER=/home/gplum/.local/lib/R
 export R_LIBS_USER
-<<<<<<< HEAD
-=======
-
-# export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
->>>>>>> Updating the environment and removing unused aliases.
