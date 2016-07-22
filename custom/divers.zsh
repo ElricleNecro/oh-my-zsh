@@ -91,12 +91,3 @@ set_ensta() {
 unset_ensta() {
 	unset http_proxy https_proxy ftp_proxy
 }
-
-function createClassPath() {
-        for f in $*
-        do
-                CL="$CL:$f"
-        done
-        echo $CL
-}
-
