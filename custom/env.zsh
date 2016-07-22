@@ -72,8 +72,8 @@ MANPATH="/usr/local/man:$MANPATH"
 MANPATH="$HOME/.local/share/man:$MANPATH"
 export MANPATH
 
-PATH="/usr/local/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
+PATH="/usr/local/bin:$PATH"
 PATH="$HOME/.local/lib/go/bin/:$PATH"
 PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.gem/ruby/2.3.0/bin:$PATH"
