@@ -114,3 +114,9 @@ export RUST_SRC_PATH
 
 R_LIBS_USER=/home/gplum/.local/lib/R
 export R_LIBS_USER
+<<<<<<< HEAD
+=======
+
+# export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
+# export MANPATH="/usr/local/man:$MANPATH"
+>>>>>>> Updating the environment and removing unused aliases.
