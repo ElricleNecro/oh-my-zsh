@@ -1,4 +1,7 @@
-source $HOME/Documents/src/Python/vf-py/vf-comp.sh
+if [[ -f $HOME/Documents/src/Python/vf-py/vf-comp.sh ]]
+then
+	source $HOME/Documents/src/Python/vf-py/vf-comp.sh
+fi
 
 #Une auto complétion pour les noms d'hôtes ssh :
 if [[ "$SHELL" = "bash" || "$SHELL" = "/bin/bash" ]]
