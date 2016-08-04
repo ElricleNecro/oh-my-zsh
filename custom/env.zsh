@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 PERL5LIB=$PERL5LIB:$HOME/.local/lib/
-=======
-PERL5LIB=$PERL5LIB:/home/plum/.local/lib/
->>>>>>> Added some of my configuration file.
 export PERL5LIB
 
 # PAGER=`which most`
