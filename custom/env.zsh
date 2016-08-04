@@ -72,6 +72,7 @@ MANPATH="/usr/local/man:$MANPATH"
 MANPATH="$HOME/.local/share/man:$MANPATH"
 export MANPATH
 
+PATH="/usr/local/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
 PATH="$HOME/.local/lib/go/bin/:$PATH"
 PATH="$HOME/.cargo/bin:$PATH"
@@ -114,22 +115,5 @@ export RUST_SRC_PATH
 R_LIBS_USER=/home/gplum/.local/lib/R
 export R_LIBS_USER
 
-export GAIAHOME="$HOME/Documents/Gaia/Environnement"
-# export DPCCCOMMON="$HOME/gaia/DPCCCOMMON/R_19.1.0"
-# export DPCCCOMMON="$GAIAHOME/DPCCCOMMON/R_19.0.1"
-# export CU6COMMON="$HOME/gaia/CU6COMMON/R_19.1.1"
-# export CU6COMMON="$GAIAHOME/CU6COMMON/R_18.2.0"
-# export SOFCOMMON="$GAIAHOME/SOFCOMMON"
-# export DOCCOMMON="$GAIAHOME/DOCCOMMON"
-# export tmtoolsversion="13.0.0"
-
-# config de ant
-# export ANT="$SOFCOMMON/apache-ant-1.9.2/bin/ant"
-# export ANT_HOME="$SOFCOMMON/apache-ant-1.9.2"
-# export ANT_OPTS="-Xms2048m -Xmx7000m"
-# export COBERTURA_HOME="$SOFCOMMON/cobertura-2.0.3"
-
-# export TEXMFHOME="$DOCCOMMON/texmf"
-
-# export JAVA_HOME=/usr/lib/jvm/java-8-jdk
-# export PATH="$PATH:$JAVA_HOME/bin:$ANT_HOME/bin:$COBERTURA_HOME"
+# export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
+# export MANPATH="/usr/local/man:$MANPATH"
