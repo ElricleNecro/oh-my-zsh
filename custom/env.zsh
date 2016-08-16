@@ -1,4 +1,4 @@
-PERL5LIB=$PERL5LIB:/home/plum/.local/lib/
+PERL5LIB=$PERL5LIB:$HOME/.local/lib/
 export PERL5LIB
 
 # PAGER=`which most`
