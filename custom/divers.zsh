@@ -17,6 +17,12 @@ then
 	fi
 fi
 
+function list-theme {
+	for f in ~/.oh-my-zsh/themes/*
+	do
+		basename $(echo ${f} | sed -e 's:.zsh-theme::')
+	done
+}
 
 function ranger-cd {
     tempfile='/tmp/chosendir'
@@ -93,3 +99,4 @@ function createClassPath() {
         done
         echo $CL
 }
+

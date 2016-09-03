@@ -72,7 +72,6 @@ MANPATH="/usr/local/man:$MANPATH"
 MANPATH="$HOME/.local/share/man:$MANPATH"
 export MANPATH
 
-PATH="/usr/local/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
 PATH="/usr/local/bin:$PATH"
 PATH="$HOME/.local/lib/go/bin/:$PATH"
