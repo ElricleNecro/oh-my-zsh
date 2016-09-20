@@ -100,3 +100,7 @@ function createClassPath() {
         echo $CL
 }
 
+function w3mimg () {
+	w3m -o imgdisplay=/usr/lib/w3m/w3mimgdisplay $1
+}
+
