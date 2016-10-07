@@ -1,7 +1,7 @@
 PERL5LIB=$PERL5LIB:$HOME/.local/lib/
 export PERL5LIB
 
-# PAGER=`which most`
+# PAGER="$(which most) -s"
 # export PAGER
 
 #MANPAGER="col -b | view -c 'set ft=man nomod nolist' -"
