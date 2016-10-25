@@ -2,7 +2,8 @@ PERL5LIB=$PERL5LIB:$HOME/.local/lib/
 export PERL5LIB
 
 # PAGER="$(which most) -s"
-# export PAGER
+PAGER="$(which less)"
+export PAGER
 
 #MANPAGER="col -b | view -c 'set ft=man nomod nolist' -"
 # MANPAGER=`which most`
@@ -11,7 +12,17 @@ export PERL5LIB
 MOST_SWITCHES="-s"
 export MOST_SWITCHES
 
-LESS="-R"
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;33m'   
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+export LESS_TERMCAP_ue=$'\E[0m'
+
+eval $(lesspipe.sh)
+
+LESS="-RXF"
 export LESS
 
 EDITOR=`which nvim`
