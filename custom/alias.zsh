@@ -41,6 +41,8 @@ alias vi='nvim'
 
 alias yu='yaourt -Syua'
 
+alias mux='tmuxinator'
+
 ## global aliases (for those who like them) ##
 alias -g '...'='../..'
 alias -g '....'='../../..'
