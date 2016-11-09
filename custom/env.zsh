@@ -20,7 +20,7 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 export LESS_TERMCAP_ue=$'\E[0m'
 
-eval $(lesspipe.sh)
+eval $($HOME/.lessfilter)
 
 LESS="-RXF"
 export LESS
@@ -120,7 +120,7 @@ export BROWSER
 BYOBU_CONFIG_DIR=$HOME/.byobu
 export BYOBU_CONFIG_DIR
 
-RUST_SRC_PATH="$HOME/Documents/src/Rust/rustc-1.7.0/src"
+RUST_SRC_PATH="/usr/src/rust/src"
 export RUST_SRC_PATH
 
 R_LIBS_USER=/home/gplum/.local/lib/R
