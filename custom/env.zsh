@@ -38,7 +38,7 @@ export LS_COLORS
 GNUTERM="wxt"
 export GNUTERM
 
-GOPATH="$HOME/.local/lib/go/:/usr/lib/go/"
+GOPATH="$HOME/.local/lib/go:/usr/lib/go"
 export GOPATH
 
 GOBIN="$HOME/.local/lib/go/bin"
