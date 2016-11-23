@@ -1,6 +1,7 @@
 alias xinit='startx ~/.xinitrc'
 
 alias c='var=$(cal); echo -e "${var/ $(date +%-d) / $(echo -e "\033[01;31m$(date +%-d)\033[00m ")}"'
+alias meteo='curl -4 wttr.in/Paris'
 
 alias gnuplot='PAGER=less gnuplot'
 alias pylab='/usr/bin/ipython --autoindent --no-banner --pylab=tk'
