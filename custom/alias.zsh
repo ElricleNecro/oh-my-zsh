@@ -12,6 +12,8 @@ alias urxvt='XMODIFIERS='' urxvt'
 alias feh-all='feh --auto-zoom --thumbnails --title'
 alias feh='feh -q -d'
 
+alias cat='less'
+
 alias fortune='fortune 5% computers 15% ferengi_rules_of_acquisition 10% discworld 20% fr 10% futurama 2% linux 8% science 20% startrek 10% starwars'
 
 alias temperature='sensors && sudo hddtemp /dev/sda'
