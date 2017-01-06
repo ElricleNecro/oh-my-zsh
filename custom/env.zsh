@@ -20,10 +20,14 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 export LESS_TERMCAP_ue=$'\E[0m'
 
-eval $($HOME/.lessfilter)
+# eval $($HOME/.lessfilter)
 
 LESS="-RXF"
 export LESS
+
+LESSOPEN="|/home/gplum/.lessfilter %s"
+LESSCHARSET=utf-8
+export LESS LESSOPEN LESSCHARSET
 
 EDITOR=`which nvim`
 export EDITOR
