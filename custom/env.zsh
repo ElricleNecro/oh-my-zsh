@@ -25,7 +25,7 @@ export LESS_TERMCAP_ue=$'\E[0m'
 LESS="-RXF"
 export LESS
 
-LESSOPEN="|/home/gplum/.lessfilter %s"
+LESSOPEN="| $HOME/.lessfilter %s"
 LESSCHARSET=utf-8
 export LESS LESSOPEN LESSCHARSET
 
