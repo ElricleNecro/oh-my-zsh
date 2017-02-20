@@ -1,5 +1,6 @@
 # Updates editor information when the keymap changes.
-function zle-keymap-select() {
+function zle-line-init zle-keymap-select() {
+  powerlevel9k_prepare_prompts
   zle reset-prompt
   zle -R
 }
@@ -9,6 +10,7 @@ TRAPWINCH() {
   zle &&  zle -R
 }
 
+zle -N zle-line-init
 zle -N zle-keymap-select
 zle -N edit-command-line
 
