@@ -22,7 +22,7 @@ export LESS_TERMCAP_ue=$'\E[0m'
 
 # eval $($HOME/.lessfilter)
 
-LESS="-RXF"
+LESS="-RF"
 export LESS
 
 LESSOPEN="| $HOME/.lessfilter %s"
