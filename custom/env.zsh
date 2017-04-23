@@ -22,7 +22,7 @@ export LESS_TERMCAP_ue=$'\E[0m'
 
 # eval $($HOME/.lessfilter)
 
-LESS="-RXF"
+LESS="-R"
 export LESS
 
 LESSOPEN="| $HOME/.lessfilter %s"
@@ -129,6 +129,9 @@ export RUST_SRC_PATH
 
 R_LIBS_USER=/home/gplum/.local/lib/R
 export R_LIBS_USER
+
+# QT_STYLE_OVERRIDE=adwaita
+# export QT_STYLE_OVERRIDE
 
 QT_QPA_PLATFORMTHEME=qt5ct
 export QT_QPA_PLATFORMTHEME
