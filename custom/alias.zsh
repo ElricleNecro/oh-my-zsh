@@ -38,7 +38,7 @@ alias lsa='ls -a .*(.)'
 alias lse='ls -d *(/^F)'
 alias lsold="ls -rtlh *(D.Om[1,10])"
 
-alias tree='tree -I "build|*.egg-info|__pycache__"'
+alias tree='tree -I "build|*.egg-info|__pycache__|target"'
 
 alias vi='nvim'
 
