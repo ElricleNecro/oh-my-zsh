@@ -1,6 +1,6 @@
 # Updates editor information when the keymap changes.
 function zle-line-init zle-keymap-select() {
-  powerlevel9k_prepare_prompts
+  # powerlevel9k_prepare_prompts
   zle reset-prompt
   zle -R
 }
