@@ -1,5 +1,7 @@
 alias xinit='startx ~/.xinitrc'
 
+alias lumail2='lumail2 --load-file $HOME/.local/share/lumail2/lumail2.lua'
+
 alias c='var=$(cal); echo -e "${var/ $(date +%-d) / $(echo -e "\033[01;31m$(date +%-d)\033[00m ")}"'
 alias meteo='curl -4 wttr.in/Paris'
 
