@@ -2,6 +2,12 @@ alias xinit='startx ~/.xinitrc'
 
 alias lumail2='lumail2 --load-file $HOME/.local/share/lumail2/lumail2.lua'
 
+if [ -n "${NVIM_LISTEN_ADDRESS+x}" ]; then
+  alias h='nvr -o'
+  alias v='nvr -O'
+  alias t='nvr --remote-tab'
+fi
+
 alias c='var=$(cal); echo -e "${var/ $(date +%-d) / $(echo -e "\033[01;31m$(date +%-d)\033[00m ")}"'
 alias meteo='curl -4 wttr.in/Paris'
 
