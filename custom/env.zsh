@@ -32,8 +32,14 @@ export LESS LESSOPEN LESSCHARSET
 EDITOR=`which nvim`
 export EDITOR
 
-VISUAL=`which nvim`
-export VISUAL
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+	export VISUAL="nvr -cc tabedit --remote-wait +'set bufhidden=wipe'"
+else
+	export VISUAL="nvim"
+fi
+alias v="$VISUAL"
+# VISUAL=`which nvim`
+# export VISUAL
 
 eval $(TERM=xterm-256color dircolors)
 LS_COLORS="$LS_COLORS:*.tex=02;31:*.tikz=01;31:*.pdf=02;38:*.dat=02;32:*.csv=02;33:*.bak*=02;36:*.res=02;34:*.JPG=01;35"
