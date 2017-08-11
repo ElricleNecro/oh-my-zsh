@@ -10,3 +10,6 @@
 [submodule "custom/plugins/zsh-completions"]
 	path = custom/plugins/zsh-completions
 	url = https://github.com/ElricleNecro/zsh-completions
+[submodule "custom/plugins/zsh-bumblebee-plugin"]
+	path = custom/plugins/zsh-bumblebee-plugin
+	url = https://github.com/Niverton/zsh-bumblebee-plugin
