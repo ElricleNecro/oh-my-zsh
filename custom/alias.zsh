@@ -1,6 +1,6 @@
 alias xinit='startx ~/.xinitrc'
 
-alias lumail2='lumail2 --load-file $HOME/.local/share/lumail2/lumail2.lua'
+# alias lumail2='lumail2 --load-file $HOME/.local/share/lumail2/lumail2.lua'
 
 if [ -n "${NVIM_LISTEN_ADDRESS+x}" ]; then
   alias h='nvr -o'
