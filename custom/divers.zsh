@@ -25,52 +25,54 @@ function list-theme {
 }
 
 function ranger-cd {
-    tempfile='/tmp/chosendir'
-    /usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
-    test -f "$tempfile" &&
-    if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
-        cd -- "$(cat "$tempfile")"
-    fi
-    rm -f -- "$tempfile"
+	tempfile='/tmp/chosendir'
+	/usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+	test -f "$tempfile" &&
+		if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
+			cd -- "$(cat "$tempfile")"
+		fi
+		rm -f -- "$tempfile"
 }
 
 bash() {
-    NO_SWITCH="yes" command bash "$@"
+	NO_SWITCH="yes" command bash "$@"
 }
 
 restart () {
-    exec $SHELL $SHELL_ARGS "$@"
+	exec $SHELL $SHELL_ARGS "$@"
 }
 
 plap() {
-    emulate -L zsh
-    if [[ $# = 0 ]] ; then
-        echo "Usage:    $0 program"
-        echo "Example:  $0 zsh"
-        echo "Lists all occurrences of program in the current PATH."
-    else
-        ls -l ${^path}/*$1*(*N)
-    fi
+	emulate -L zsh
+	if [[ $# = 0 ]] ; then
+		echo "Usage:    $0 program"
+		echo "Example:  $0 zsh"
+		echo "Lists all occurrences of program in the current PATH."
+	else
+		ls -l ${^path}/*$1*(*N)
+	fi
 }
 
 memusage() {
-    ps aux | awk '{if (NR > 1) print $5;
-                   if (NR > 2) print "+"}
-                   END { print "p" }' | dc
+	ps aux | awk '{if (NR > 1) print $5;
+			if (NR > 2) print "+"}
+			END { print "p" }' | dc
 }
 
 ## print hex value of a number
 hex() {
-    emulate -L zsh
-    if [[ -n "$1" ]]; then
-        printf "%x\n" $1
-    else
-        print 'Usage: hex <number-to-convert>'
-        return 1
-    fi
+	emulate -L zsh
+	if [[ -n "$1" ]]; then
+		printf "%x\n" $1
+	else
+		print 'Usage: hex <number-to-convert>'
+		return 1
+	fi
 }
 
-vimhelp ()    { vim -c "help $1" -c on -c "au! VimEnter *" }
+vimhelp () {
+	vim -c "help $1" -c on -c "au! VimEnter *"
+}
 
 set_privoxy() {
 	export http_proxy="http://127.0.0.1:8118"
@@ -93,13 +95,17 @@ unset_ensta() {
 }
 
 function createClassPath() {
-        for f in $*
-        do
-                CL="$CL:$f"
-        done
-        echo $CL
+	for f in $*
+	do
+		CL="$CL:$f"
+	done
+	echo $CL
 }
 
 function w3mimg () {
 	w3m -o imgdisplay=/usr/lib/w3m/w3mimgdisplay $1
+}
+
+function mdviewer() {
+	pandoc $* | lynx -stdin
 }
