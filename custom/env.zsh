@@ -149,3 +149,7 @@ if which luarocks > /dev/null
 then
 	eval $(luarocks path)
 fi
+
+export XKB_DEFAULT_LAYOUT=fr,en
+export XKB_DEFAULT_VARIANT=oss,
+export XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle,
