@@ -153,3 +153,5 @@ fi
 export XKB_DEFAULT_LAYOUT=fr,en
 export XKB_DEFAULT_VARIANT=oss,
 export XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle,
+
+export npm_config_prefix=$HOME/.node_modules
