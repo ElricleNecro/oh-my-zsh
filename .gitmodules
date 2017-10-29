@@ -13,3 +13,6 @@
 [submodule "custom/plugins/zsh-bumblebee-plugin"]
 	path = custom/plugins/zsh-bumblebee-plugin
 	url = https://github.com/Niverton/zsh-bumblebee-plugin
+[submodule "custom/completions/dub"]
+	path = custom/completions/dub
+	url = https://github.com/ghost91-/dub-zsh-completion.git
