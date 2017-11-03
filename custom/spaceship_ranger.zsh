@@ -1,0 +1,14 @@
+SPACESHIP_RANGER_SHOW="${SPACESHIP_RANGER_SHOW:=true}"
+SPACESHIP_RANGER_PREFIX="${SPACESHIP_RANGER_PREFIX:="(level: "}"
+SPACESHIP_RANGER_SUFFIX="${SPACESHIP_RANGER_SUFFIX:=") "}"
+
+spaceship_ranger() {
+	[[ $SPACESHIP_RANGER_SHOW == false ]] && return
+	[[ -z $RANGER_LEVEL ]] && return
+
+	_prompt_section \
+		"red" \
+		"$SPACESHIP_RANGER_PREFIX" \
+		"$RANGER_LEVEL" \
+		"$SPACESHIP_RANGER_SUFFIX"
+}
