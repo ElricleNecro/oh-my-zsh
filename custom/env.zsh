@@ -127,8 +127,11 @@ export RECORDER_DIR_TMP
 RECORDER_DIR_OUT=$HOME/Vidéos/ScreenCast/
 export RECORDER_DIR_OUT
 
-# BROWSER=$(which qutebrowser)
-# export BROWSER
+BROWSER=$(which qutebrowser)
+export BROWSER
+
+BROWSERCLI=$(which w3m)
+export BROWSERCLI
 
 BYOBU_CONFIG_DIR=$HOME/.byobu
 export BYOBU_CONFIG_DIR
