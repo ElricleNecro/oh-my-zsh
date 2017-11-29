@@ -136,7 +136,7 @@ export BROWSERCLI
 BYOBU_CONFIG_DIR=$HOME/.byobu
 export BYOBU_CONFIG_DIR
 
-RUST_SRC_PATH="/usr/src/rust/src"
+RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export RUST_SRC_PATH
 
 R_LIBS_USER=/home/gplum/.local/lib/R
