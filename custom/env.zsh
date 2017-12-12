@@ -158,3 +158,11 @@ export XKB_DEFAULT_VARIANT=oss,
 export XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle,
 
 export npm_config_prefix=$HOME/.node_modules
+
+# XDG variables:
+if [[ -z "$XDG_CONFIG_DIRS" ]]
+then
+	XDG_CONFIG_DIRS="/etc/xdg"
+fi
+XDG_CONFIG_DIRS="$XDG_CONFIG_DIRS:$HOME/.config"
+export XDG_CONFIG_DIRS
