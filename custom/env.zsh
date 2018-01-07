@@ -112,8 +112,8 @@ export LATEX_MK
 PDFLATEX_FLAGS="-shell-escape"
 export PDFLATEX_FLAGS
 
-# TEXMFHOME="~/.texmf-var"
-# export TEXMFHOME
+TEXMFHOME="~/.texmf"
+export TEXMFHOME
 
 CUPS_SERVER=localhost
 export CUPS_SERVER
