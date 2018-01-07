@@ -16,3 +16,6 @@
 [submodule "custom/completions/dub"]
 	path = custom/completions/dub
 	url = https://github.com/ghost91-/dub-zsh-completion.git
+[submodule "custom/plugins/ssh"]
+	path = custom/plugins/ssh
+	url = git@gitlab.com:ElricleNecro/zsh-ssh-color-plugin.git
