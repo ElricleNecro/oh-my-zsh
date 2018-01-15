@@ -109,3 +109,14 @@ function w3mimg () {
 function mdviewer() {
 	pandoc $* | lynx -stdin
 }
+
+function upgrade_neovim() {
+	# Upgrading neovim itself:
+	pacaur -S neovim-git
+
+	# Upgrading bindings:
+	pacaur -S neovim-remote python-neovim-git python2-neovim-git
+
+	# Upgrading GUIs:
+	pacaur -S neovim-qt-git neovim-gtk-git eovim-git
+}
