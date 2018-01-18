@@ -111,6 +111,9 @@ function mdviewer() {
 }
 
 function upgrade_neovim() {
+	export CC=gcc
+	export CXX=g++
+	unset LUA_PATH LUA_CPATH
 	# Upgrading neovim itself:
 	pacaur -S neovim-git
 
