@@ -24,6 +24,16 @@ SPACESHIP_SVN_STATUS_AHEAD="${SPACESHIP_SVN_STATUS_AHEAD:="⇡"}"
 SPACESHIP_SVN_STATUS_BEHIND="${SPACESHIP_SVN_STATUS_BEHIND:="⇣"}"
 SPACESHIP_SVN_STATUS_DIVERGED="${SPACESHIP_SVN_STATUS_DIVERGED:="⇕"}"
 
+_svn_get_path() {
+	svn info | grep "URL" | grep -v "http" | cut -d'^' -f 2
+}
+
+_svn_get_branch() {
+	_svn_get_path | grep "DPAC_" && echo "trunk" && return
+
+	local type_svn = "$(_svn_get_path | cut -d'/' -f 2 | cut -d'_' -f 2)"
+}
+
 _is_svn() {
   svn info >/dev/null 2>&1
 }
@@ -34,7 +44,7 @@ spaceship_svn_branch() {
 
   _is_svn || return
 
-  _prompt_section \
+  spaceship::section \
     "$SPACESHIP_SVN_BRANCH_COLOR" \
     "$SPACESHIP_SVN_BRANCH_PREFIX$(svn_get_rev_nr)$SPACESHIP_SVN_BRANCH_SUFFIX"
     # "$SPACESHIP_SVN_BRANCH_PREFIX$(svn_get_branch_name)$SPACESHIP_SVN_BRANCH_SUFFIX"
@@ -64,7 +74,7 @@ spaceship_svn_status() {
 
   if [[ -n $svn_status ]]; then
     # Status prefixes are colorized
-    _prompt_section \
+    spaceship::section \
       "$SPACESHIP_SVN_STATUS_COLOR" \
       "$SPACESHIP_SVN_STATUS_PREFIX$svn_status$SPACESHIP_SVN_STATUS_SUFFIX"
   fi
@@ -78,7 +88,7 @@ spaceship_svn() {
 
   [[ -z $svn_branch ]] && return
 
-  _prompt_section \
+  spaceship::section \
     'white' \
     "$SPACESHIP_SVN_PREFIX" \
     "${svn_branch}${svn_status}" \
