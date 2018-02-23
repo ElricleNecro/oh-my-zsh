@@ -114,12 +114,13 @@ function upgrade_neovim() {
 	export CC=gcc
 	export CXX=g++
 	unset LUA_PATH LUA_CPATH
+
 	# Upgrading neovim itself:
-	yaourt -S neovim-git
+	yaourt -S --noconfirm neovim-git
 
 	# Upgrading bindings:
-	yaourt -S neovim-remote python-neovim-git python2-neovim-git
+	yaourt -S --noconfirm neovim-remote python-neovim-git python2-neovim-git
 
 	# Upgrading GUIs:
-	yaourt -S neovim-qt-git neovim-gtk-git eovim-git
+	yaourt -S --noconfirm neovim-qt-git neovim-gtk-git eovim-git
 }
