@@ -106,6 +106,10 @@ function w3mimg () {
 	w3m -o imgdisplay=/usr/lib/w3m/w3mimgdisplay $1
 }
 
+function vimg () {
+	kitty icat $1
+}
+
 function mdviewer() {
 	pandoc $* | lynx -stdin
 }
