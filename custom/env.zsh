@@ -10,7 +10,8 @@ export PAGER
 
 #MANPAGER="col -b | view -c 'set ft=man nomod nolist' -"
 # MANPAGER=`which most`
-# export MANPAGER
+MANPAGER="nvim +set\ filetype=man -"
+export MANPAGER
 
 MOST_SWITCHES="-s"
 export MOST_SWITCHES
