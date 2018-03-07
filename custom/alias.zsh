@@ -51,6 +51,7 @@ alias tree='tree -I "build|*.egg-info|__pycache__|target"'
 alias vi='nvim'
 
 alias yu='yaourt -Syua'
+alias pdev='pacman -Qq | awk "/^.+(-cvs|-svn|-git|-hg|-bzr|-darcs)$/"'
 
 alias mux='tmuxinator'
 
