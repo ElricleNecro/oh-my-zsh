@@ -48,7 +48,7 @@ alias mergeds='git-mergeds'
 git-lstcmt() {
 	git log --oneline $1 | grep -v fixup | head -n 1 | cut -d " " -f 1
 }
-alias lstcmt='git-lstcmt'<Paste>
+alias lstcmt='git-lstcmt'
 # $ lstcmt      # affiche le hash du dernier commit de la branche courante
 # $ lstcmt toto # affiche le hash du dernier commit de la branche toto
 git-logz() {
