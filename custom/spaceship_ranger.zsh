@@ -6,7 +6,7 @@ spaceship_ranger() {
 	[[ $SPACESHIP_RANGER_SHOW == false ]] && return
 	[[ -z $RANGER_LEVEL ]] && return
 
-	_prompt_section \
+	spaceship::section \
 		"red" \
 		"$SPACESHIP_RANGER_PREFIX" \
 		"$RANGER_LEVEL" \
