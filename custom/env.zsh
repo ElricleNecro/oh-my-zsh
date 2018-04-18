@@ -140,6 +140,9 @@ export BROWSERCLI
 BYOBU_CONFIG_DIR=$HOME/.byobu
 export BYOBU_CONFIG_DIR
 
+RUSTC_WRAPPER=sccache
+export RUSTC_WRAPPER
+
 RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export RUST_SRC_PATH
 
