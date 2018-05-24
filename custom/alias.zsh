@@ -30,7 +30,7 @@ alias fortune='fortune 5% computers 15% ferengi_rules_of_acquisition 10% discwor
 # System: {{{1
 alias suspend='systemctl suspend && i3lock -i ~/Images/Wallpapers/DSCN0906.png -t -u -f'
 
-alias cat='less -XF'
+# alias cat='less -XF'
 
 alias temperature='sensors && sudo hddtemp /dev/sda'
 alias dfc='dfc -T -o -f -w'
