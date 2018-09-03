@@ -105,6 +105,7 @@ PATH="/usr/local/bin:$PATH"
 PATH="$HOME/.local/lib/go/bin/:$PATH"
 PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.gem/ruby/2.4.0/bin:$PATH"
+PATH="$PATH:$HOME/.node_modules/bin"
 export PATH
 
 LATEX_MK_DIR=/usr/share/latex-mk/
