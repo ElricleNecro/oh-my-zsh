@@ -1,6 +1,9 @@
 _JAVA_AWT_WM_NONREPARENTING=1
 export _JAVA_AWT_WM_NONREPARENTING
 
+AWT_TOOLKIT=MToolkit
+export AWT_TOOLKIT
+
 PERL5LIB=$PERL5LIB:$HOME/.local/lib/
 export PERL5LIB
 
@@ -10,7 +13,8 @@ export PAGER
 
 #MANPAGER="col -b | view -c 'set ft=man nomod nolist' -"
 # MANPAGER=`which most`
-# export MANPAGER
+MANPAGER="nvim +set\ filetype=man -"
+export MANPAGER
 
 MOST_SWITCHES="-s"
 export MOST_SWITCHES
@@ -101,6 +105,7 @@ PATH="/usr/local/bin:$PATH"
 PATH="$HOME/.local/lib/go/bin/:$PATH"
 PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.gem/ruby/2.4.0/bin:$PATH"
+PATH="$PATH:$HOME/.node_modules/bin"
 export PATH
 
 LATEX_MK_DIR=/usr/share/latex-mk/
@@ -136,7 +141,11 @@ export BROWSERCLI
 BYOBU_CONFIG_DIR=$HOME/.byobu
 export BYOBU_CONFIG_DIR
 
-if which rustc >/dev/null 2>/dev/null; then
+# RUSTC_WRAPPER=sccache
+# export RUSTC_WRAPPER
+
+if which rustc > /dev/null 2>/dev/null
+then
 	RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 	export RUST_SRC_PATH
 fi
@@ -155,7 +164,7 @@ then
 	eval $(luarocks path)
 fi
 
-export XKB_DEFAULT_LAYOUT=fr,en
+export XKB_DEFAULT_LAYOUT=fr,us
 export XKB_DEFAULT_VARIANT=oss,
 export XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle,
 

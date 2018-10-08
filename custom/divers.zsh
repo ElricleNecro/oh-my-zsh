@@ -106,6 +106,10 @@ function w3mimg () {
 	w3m -o imgdisplay=/usr/lib/w3m/w3mimgdisplay $1
 }
 
+function vimg () {
+	kitty icat $1
+}
+
 function mdviewer() {
 	pandoc $* | lynx -stdin
 }
@@ -114,12 +118,13 @@ function upgrade_neovim() {
 	export CC=gcc
 	export CXX=g++
 	unset LUA_PATH LUA_CPATH
+
 	# Upgrading neovim itself:
-	pacaur -S neovim-git
+	trizen -S --noconfirm neovim-git
 
 	# Upgrading bindings:
-	pacaur -S neovim-remote python-neovim-git python2-neovim-git
+	trizen -S --noconfirm neovim-remote python-neovim-git python2-neovim-git
 
 	# Upgrading GUIs:
-	pacaur -S neovim-qt-git neovim-gtk-git eovim-git
+	trizen -S --noconfirm neovim-qt-git neovim-gtk-git eovim-git
 }

@@ -1,6 +1,6 @@
-alias xinit='startx ~/.xinitrc'
-
 # alias lumail2='lumail2 --load-file $HOME/.local/share/lumail2/lumail2.lua'
+
+alias vi='nvim'
 
 if [ -n "${NVIM_LISTEN_ADDRESS+x}" ]; then
   alias h='nvr -o'
@@ -8,21 +8,29 @@ if [ -n "${NVIM_LISTEN_ADDRESS+x}" ]; then
   alias t='nvr --remote-tab'
 fi
 
-alias c='var=$(cal); echo -e "${var/ $(date +%-d) / $(echo -e "\033[01;31m$(date +%-d)\033[00m ")}"'
-alias meteo='curl -4 wttr.in/Paris'
-
+# Science: {{{1
 alias gnuplot='PAGER=less gnuplot'
 alias pylab='/usr/bin/ipython --autoindent --no-banner --pylab=tk'
 alias VerificationShell='ipython --profile=VerificationShell'
 alias yorick='rlwrap -pcyan -c yorick'
+# 1}}}
+
+alias xinit='startx ~/.xinitrc'
 alias urxvt='XMODIFIERS='' urxvt'
+
+alias c='var=$(cal); echo -e "${var/ $(date +%-d) / $(echo -e "\033[01;31m$(date +%-d)\033[00m ")}"'
+alias meteo='curl -4 wttr.in/Paris'
 
 alias feh-all='feh --auto-zoom --thumbnails --title'
 alias feh='feh -q -d'
 
-alias cat='less -XF'
-
 alias fortune='fortune 5% computers 15% ferengi_rules_of_acquisition 10% discworld 20% fr 10% futurama 2% linux 8% science 20% startrek 10% starwars'
+
+
+# System: {{{1
+alias suspend='systemctl suspend && i3lock -i ~/Images/Wallpapers/DSCN0906.png -t -u -f'
+
+# alias cat='less -XF'
 
 alias temperature='sensors && sudo hddtemp /dev/sda'
 alias dfc='dfc -T -o -f -w'
@@ -31,10 +39,9 @@ alias j='jobs -l'
 
 alias h='htop'
 
-alias suspend='systemctl suspend && i3lock -i ~/Images/Wallpapers/DSCN0906.png -t -u -f'
-
 alias su='su -l'
 
+# FS view: {{{2
 alias ls='ls --color=auto --group-directories-first'
 alias l='ls -CF'
 alias ll='ls -lh'
@@ -47,10 +54,17 @@ alias lse='ls -d *(/^F)'
 alias lsold="ls -rtlh *(D.Om[1,10])"
 
 alias tree='tree -I "build|*.egg-info|__pycache__|target"'
+# 2}}}
 
-alias vi='nvim'
-
+# Package system: {{{2
 alias yu='yaourt -Syua'
+alias pdev='pacman -Qq | awk "/^.+(-cvs|-svn|-git|-hg|-bzr|-darcs)$/"'
+# 2}}}
+
+# Dev: {{{2
+alias crun='cargo run --'
+# 2}}}
+# 1}}}
 
 alias mux='tmuxinator'
 
