@@ -5,11 +5,6 @@ function zle-line-init zle-keymap-select() {
   zle -R
 }
 
-# Ensures that MODE_INDITCATOR is displayed on terminal start up.
-function zle-line-init() {
-  zle reset-prompt
-}
-
 # Ensure that the prompt is redrawn when the terminal size changes.
 TRAPWINCH() {
   zle && { zle -R; zle reset-prompt }
