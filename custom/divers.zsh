@@ -17,6 +17,11 @@ then
 	fi
 fi
 
+if which kitty >/dev/null
+then
+	kitty + complete setup zsh | source /dev/stdin
+fi
+
 function list-theme {
 	for f in ~/.oh-my-zsh/themes/*
 	do
