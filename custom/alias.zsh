@@ -42,7 +42,14 @@ alias h='htop'
 alias su='su -l'
 
 # FS view: {{{2
-alias ls='ls --color=auto --group-directories-first'
+
+if which exa >/dev/null 2>/dev/null
+then
+	alias ls='exa'
+else
+	alias ls='ls --color=auto --group-directories-first'
+fi
+
 alias l='ls -CF'
 alias ll='ls -lh'
 alias la='ls -A'
