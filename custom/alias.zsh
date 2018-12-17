@@ -43,6 +43,11 @@ alias su='su -l'
 
 # FS view: {{{2
 
+if which bat >/dev/null 2>/dev/null
+then
+	alias cat='bat'
+fi
+
 if which exa >/dev/null 2>/dev/null
 then
 	alias ls='exa'
