@@ -51,19 +51,29 @@ fi
 if which exa >/dev/null 2>/dev/null
 then
 	alias ls='exa'
+
+	alias l='ls -F'
+	alias ll='ls -lh'
+	alias la='ls --all'
+	alias lla='ll --all'
+	alias lsnew="ls -rtlh *(D.om[1,10])"
+	alias lad='ls -d .*(/)'
+	alias lsa='ls -a .*(.)'
+	alias lse='ls -d *(/^F)'
+	alias lsold="ls -rtlh *(D.Om[1,10])"
 else
 	alias ls='ls --color=auto --group-directories-first'
-fi
 
-alias l='ls -CF'
-alias ll='ls -lh'
-alias la='ls -A'
-alias lla='ll -A'
-alias lsnew="ls -rtlh *(D.om[1,10])"
-alias lad='ls -d .*(/)'
-alias lsa='ls -a .*(.)'
-alias lse='ls -d *(/^F)'
-alias lsold="ls -rtlh *(D.Om[1,10])"
+	alias l='ls -CF'
+	alias ll='ls -lh'
+	alias la='ls -A'
+	alias lla='ll -A'
+	alias lsnew="ls -rtlh *(D.om[1,10])"
+	alias lad='ls -d .*(/)'
+	alias lsa='ls -a .*(.)'
+	alias lse='ls -d *(/^F)'
+	alias lsold="ls -rtlh *(D.Om[1,10])"
+fi
 
 alias tree='tree -I "build|*.egg-info|__pycache__|target"'
 # 2}}}
