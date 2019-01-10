@@ -131,5 +131,5 @@ function upgrade_neovim() {
 	trizen -S --noconfirm neovim-remote python-neovim-git python2-neovim-git
 
 	# Upgrading GUIs:
-	trizen -S --noconfirm neovim-qt-git neovim-gtk-git eovim-git
+	trizen -S --noconfirm neovim-qt-git # neovim-gtk-git eovim-git
 }
