@@ -133,3 +133,8 @@ function upgrade_neovim() {
 	# Upgrading GUIs:
 	trizen -S --noconfirm neovim-qt-git # neovim-gtk-git eovim-git
 }
+
+function mkcd() {
+	mkdir $1
+	cd $1
+}
