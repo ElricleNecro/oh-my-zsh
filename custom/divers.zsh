@@ -125,13 +125,13 @@ function upgrade_neovim() {
 	unset LUA_PATH LUA_CPATH
 
 	# Upgrading neovim itself:
-	trizen -S --noconfirm neovim-git
+	yay -S --noconfirm neovim-git
 
 	# Upgrading bindings:
-	trizen -S --noconfirm neovim-remote python-neovim-git python2-neovim-git
+	yay -S --noconfirm neovim-remote python-neovim-git python2-neovim-git
 
 	# Upgrading GUIs:
-	trizen -S --noconfirm neovim-qt-git # neovim-gtk-git eovim-git
+	yay -S --noconfirm neovim-qt-git # neovim-gtk-git eovim-git
 }
 
 function mkcd() {
