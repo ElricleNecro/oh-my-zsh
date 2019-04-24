@@ -1,16 +1,12 @@
 # Updates editor information when the keymap changes.
-function zle-line-init zle-keymap-select() {
-  # powerlevel9k_prepare_prompts
+function zle-keymap-select() {
+  # update keymap variable for the prompt
+  VI_KEYMAP=$KEYMAP
+
   zle reset-prompt
   zle -R
 }
 
-# Ensure that the prompt is redrawn when the terminal size changes.
-TRAPWINCH() {
-  zle && { zle -R; zle reset-prompt }
-}
-
-zle -N zle-line-init
 zle -N zle-keymap-select
 zle -N edit-command-line
 
@@ -30,8 +26,9 @@ bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 
-# allow ctrl-r to perform backward search in history
+# allow ctrl-r and ctrl-s to search the history
 bindkey '^r' history-incremental-search-backward
+bindkey '^s' history-incremental-search-forward
 
 # allow ctrl-a and ctrl-e to move to beginning/end of line
 bindkey '^a' beginning-of-line
@@ -43,7 +40,7 @@ if [[ "$MODE_INDICATOR" == "" ]]; then
 fi
 
 function vi_mode_prompt_info() {
-  echo "${${KEYMAP/vicmd/$MODE_INDICATOR}/(main|viins)/}"
+  echo "${${VI_KEYMAP/vicmd/$MODE_INDICATOR}/(main|viins)/}"
 }
 
 # define right prompt, if it wasn't defined by a theme
