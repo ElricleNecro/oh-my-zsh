@@ -128,7 +128,7 @@ function upgrade_neovim() {
 	yay -S --noconfirm neovim-git
 
 	# Upgrading bindings:
-	yay -S --noconfirm neovim-remote python-neovim-git python2-neovim-git
+	yay -S --noconfirm neovim-remote python-pynvim
 
 	# Upgrading GUIs:
 	yay -S --noconfirm neovim-qt-git # neovim-gtk-git eovim-git
