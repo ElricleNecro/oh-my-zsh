@@ -40,8 +40,8 @@ if [[ -n "$remote" ]]; then
 fi
 
 printf "${BLUE}%s${NORMAL}\n" "Updating Oh My Zsh"
-if git pull --rebase --stat origin master
 # if git pull --stat --rebase=merges fork master && git pull --stat origin master
+if git pull --rebase --stat origin master && git pull --stat fork master
 then
   printf '%s' "$GREEN"
   printf '%s\n' '         __                                     __   '
