@@ -24,7 +24,7 @@ printf "${BLUE}%s${NORMAL}\n" "Updating Oh My Zsh"
 cd "$ZSH"
 git remote show fork 2>/dev/null || git remote add fork https://github.com/robbyrussell/oh-my-zsh
 
-if git pull --stat --rebase=preserve fork master && git pull --stat origin master
+if git pull --stat --rebase=merges fork master && git pull --stat origin master
 then
   printf '%s' "$GREEN"
   printf '%s\n' '         __                                     __   '
