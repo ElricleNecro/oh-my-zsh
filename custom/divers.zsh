@@ -138,3 +138,17 @@ function mkcd() {
 	mkdir $1
 	cd $1
 }
+
+ensure_path() {
+    case ":$PATH:" in
+        *:$1:*) ;;
+        *) export PATH="$1:$PATH";;
+    esac
+}
+
+ensure_path_end() {
+    case ":$PATH:" in
+        *:$1:*) ;;
+        *) export PATH="$PATH:$1";;
+    esac
+}
