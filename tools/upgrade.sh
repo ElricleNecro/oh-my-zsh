@@ -21,7 +21,8 @@ else
 fi
 
 cd "$ZSH"
-git remote show fork 2>/dev/null || git remote add fork https://github.com/robbyrussell/oh-my-zsh
+
+git remote show fork 2>/dev/null || git remote add fork https://github.com/ohmyzsh/ohmyzsh.git
 
 # Set git-config values known to fix git errors
 # Line endings (#4069)
