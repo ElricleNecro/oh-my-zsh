@@ -20,11 +20,21 @@ else
 	NORMAL=""
 fi
 
-printf "${BLUE}%s${NORMAL}\n" "Updating Oh My Zsh"
 cd "$ZSH"
 git remote show fork 2>/dev/null || git remote add fork https://github.com/robbyrussell/oh-my-zsh
 
-if git pull --stat --rebase=merges fork master && git pull --stat origin master
+# Set git-config values known to fix git errors
+# Line endings (#4069)
+git config core.eol lf
+git config core.autocrlf false
+# zeroPaddedFilemode fsck errors (#4963)
+git config fsck.zeroPaddedFilemode ignore
+git config fetch.fsck.zeroPaddedFilemode ignore
+git config receive.fsck.zeroPaddedFilemode ignore
+
+printf "${BLUE}%s${NORMAL}\n" "Updating Oh My Zsh"
+if git pull --rebase --stat origin master
+# if git pull --stat --rebase=merges fork master && git pull --stat origin master
 then
   printf '%s' "$GREEN"
   printf '%s\n' '         __                                     __   '
