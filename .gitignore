@@ -8,3 +8,4 @@ custom/
 cache/
 log/
 custom/plugins/gaia
+*.swp
