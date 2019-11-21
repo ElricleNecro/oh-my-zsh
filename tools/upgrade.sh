@@ -32,6 +32,12 @@ git config fsck.zeroPaddedFilemode ignore
 git config fetch.fsck.zeroPaddedFilemode ignore
 git config receive.fsck.zeroPaddedFilemode ignore
 
+# Update upstream remote to ohmyzsh org
+remote=$(git remote -v | awk '/https:\/\/github\.com\/robbyrussell\/oh-my-zsh\.git/{ print $1; exit }')
+if [[ -n "$remote" ]]; then
+  git remote set-url "$remote" "https://github.com/ohmyzsh/ohmyzsh.git"
+fi
+
 printf "${BLUE}%s${NORMAL}\n" "Updating Oh My Zsh"
 if git pull --rebase --stat origin master
 # if git pull --stat --rebase=merges fork master && git pull --stat origin master
