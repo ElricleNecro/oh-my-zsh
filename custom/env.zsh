@@ -159,10 +159,10 @@ export R_LIBS_USER
 QT_QPA_PLATFORMTHEME=qt5ct
 export QT_QPA_PLATFORMTHEME
 
-if which luarocks > /dev/null
-then
-	eval $(luarocks path)
-fi
+# if which luarocks > /dev/null
+# then
+	# eval $(luarocks path)
+# fi
 
 export XKB_DEFAULT_LAYOUT=fr,us
 export XKB_DEFAULT_VARIANT=oss,
