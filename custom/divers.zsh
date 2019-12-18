@@ -132,6 +132,8 @@ function upgrade_neovim() {
 
 	# Upgrading GUIs:
 	yay -S --noconfirm neovim-qt-git # neovim-gtk-git eovim-git
+
+	nvim +PlugClean +PlugInstall +PlugUpdate +qa
 }
 
 function mkcd() {
