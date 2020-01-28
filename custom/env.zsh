@@ -180,3 +180,13 @@ export XDG_CONFIG_DIRS
 
 export NVIM_GTK_NO_HEADERBAR=1
 export NVIM_GTK_PREFER_DARK_THEME=1
+
+if which fzf >/dev/null 2>/dev/null
+then
+	FZF_DEFAULT_OPTS="--preview='head -$LINES {}'"
+	export FZF_DEFAULT_OPTS
+	FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200' --select-1 --exit-0"
+	export FZF_CTRL_T_OPTS
+	FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
+	export FZF_ALT_C_OPTS
+fi

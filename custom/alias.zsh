@@ -26,7 +26,6 @@ alias feh='feh -q -d'
 
 alias fortune='fortune 5% computers 15% ferengi_rules_of_acquisition 10% discworld 20% fr 10% futurama 2% linux 8% science 20% startrek 10% starwars'
 
-
 # System: {{{1
 alias suspend='systemctl suspend && i3lock -i ~/Images/Wallpapers/DSCN0906.png -t -u -f'
 
