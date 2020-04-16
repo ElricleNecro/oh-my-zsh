@@ -190,3 +190,5 @@ then
 	FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 	export FZF_ALT_C_OPTS
 fi
+
+export WINEDLLOVERRIDES="winemenubuilder.exe=d"
