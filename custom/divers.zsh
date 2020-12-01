@@ -132,8 +132,8 @@ function mdviewer() {
 }
 
 function upgrade_neovim() {
-	export CC=gcc
-	export CXX=g++
+	local old_path=$LUA_PATH
+	local old_cpath=$LUA_CPATH
 	unset LUA_PATH LUA_CPATH
 
 	# Upgrading neovim itself:
@@ -145,7 +145,10 @@ function upgrade_neovim() {
 	# Upgrading GUIs:
 	yay -S --noconfirm neovim-qt-git # neovim-gtk-git eovim-git
 
-	nvim +PlugClean +PlugInstall +PlugUpdate +qa
+	nvim +PackerCompile +PackerSync +qa
+
+	export LUA_PATH=$old_path
+	export LUA_CPATH=$old_cpath
 }
 
 function mkcd() {
