@@ -22,6 +22,11 @@ then
 	kitty + complete setup zsh | source /dev/stdin
 fi
 
+if [[ -z "${DEFAULT_PKG_MAN}" ]]
+then
+	export DEFAULT_PKG_MAN=yay
+fi
+
 open_with_fzf() {
     fd -t f -H -I | fzf -m --preview="xdg-mime query default {}" | xargs -ro -d "\n" xdg-open 2>&-
 }
@@ -149,6 +154,14 @@ function upgrade_neovim() {
 
 	export LUA_PATH=$old_path
 	export LUA_CPATH=$old_cpath
+}
+
+function pac-git-update() {
+	local pkgcmd=${1:-${DEFAULT_PKG_MAN}}
+	local exclude=${PACS_UPGRADE_EXCLUDE:-ckb-next-git|kitty-git|neovim-git|neovim-qt-git|qutebrowser-git}
+	local pkgs=$(yay -Qs -- -git | grep -E '^local' | cut -f 1 -d ' ' | sed -e 's:local/::g' | grep -Ev "${exclude}")
+
+	yay -S $(yay -Qs -- -git | grep -E '^local' | cut -f 1 -d ' ' | sed -e 's:local/::g' | grep -Ev "${exclude}")
 }
 
 function mkcd() {
