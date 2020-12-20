@@ -192,3 +192,13 @@ then
 fi
 
 export WINEDLLOVERRIDES="winemenubuilder.exe=d"
+
+
+#--modpath : The directory to install modules to. Defaults to $JANET_MODPATH, $JANET_PATH, or (dyn :syspath)
+#--headerpath : The directory containing janet headers. Defaults to $JANET_HEADERPATH.
+#--binpath : The directory to install binaries and scripts. Defaults to $JANET_BINPATH.
+#--libpath : The directory containing janet C libraries (libjanet.*). Defaults to $JANET_LIBPATH.
+
+export JANET_MODPATH="${HOME}/.local/share/janet/mods"
+export JANET_BINPATH="${HOME}/.local/share/janet/bin"
+export JANET_PATH="${HOME}/.local/share/janet/mods"
