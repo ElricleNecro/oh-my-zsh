@@ -102,6 +102,10 @@ MANPATH="/usr/local/man:$MANPATH"
 MANPATH="$HOME/.local/share/man:$MANPATH"
 export MANPATH
 
+if [[ -d "$HOME/.poetry/" ]]
+then
+	PATH="$HOME/.poetry/bin:$PATH"
+fi
 PATH="$HOME/.local/bin:$PATH"
 PATH="/usr/local/bin:$PATH"
 PATH="$HOME/.local/lib/go/bin/:$PATH"
