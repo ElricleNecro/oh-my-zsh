@@ -61,7 +61,12 @@ then
 	alias lse='ls -d *(/^F)'
 	alias lsold="ls -rtlh *(D.Om[1,10])"
 else
-	alias ls='ls --color=auto --group-directories-first'
+	if [[ "$(uname)" != "Darwin" ]]
+	then
+		alias ls='ls --color=auto --group-directories-first'
+	else
+		alias ls='ls -G'
+	fi
 
 	alias l='ls -CF'
 	alias ll='ls -lh'
