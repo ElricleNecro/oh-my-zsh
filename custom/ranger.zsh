@@ -1,4 +1,4 @@
-rg() {
+rgr() {
 	if [ -z "$RANGER_LEVEL" ]
 	then
 		ranger $@
