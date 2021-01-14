@@ -50,9 +50,12 @@ alias v="$VISUAL"
 # VISUAL=`which nvim`
 # export VISUAL
 
-eval $(TERM=xterm-256color dircolors)
-LS_COLORS="$LS_COLORS:*.tex=02;31:*.tikz=01;31:*.pdf=02;38:*.dat=02;32:*.csv=02;33:*.bak*=02;36:*.res=02;34:*.JPG=01;35"
-export LS_COLORS
+if which dircolors 1>/dev/null 2>/dev/null
+then
+	eval $(TERM=xterm-256color dircolors)
+	LS_COLORS="$LS_COLORS:*.tex=02;31:*.tikz=01;31:*.pdf=02;38:*.dat=02;32:*.csv=02;33:*.bak*=02;36:*.res=02;34:*.JPG=01;35"
+	export LS_COLORS
+fi
 
 GNUTERM="wxt"
 export GNUTERM
